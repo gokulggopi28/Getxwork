@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_demo/components/custom_button_style.dart';
+import 'package:get_demo/pages/dependency_inj.dart';
 import 'package:get_demo/pages/next_page.dart';
 import 'package:get_demo/pages/state_page.dart';
 import 'package:get_demo/pages/student_name.dart';
@@ -129,7 +130,15 @@ class HomePage extends StatelessWidget {
               style: customButtonStyle,
               onPressed: (){
                Get.to( WorkerPage());
-              }, child: const Text('Worker Page'))
+              }, child: const Text('Worker Page')),
+               const SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+              style: customButtonStyle,
+              onPressed: (){
+               Get.to( DependencyInj());
+              }, child: const Text('Dependency Injection'))
 
             
         

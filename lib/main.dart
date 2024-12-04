@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_demo/controllers/my_controller.dart';
 import 'package:get_demo/pages/home_page.dart';
 
 void main() {
+  Get.put(MyController());
   runApp(const MyApp());
 }
 
