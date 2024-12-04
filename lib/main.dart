@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_demo/controllers/my_controller.dart';
 import 'package:get_demo/pages/home_page.dart';
 
+import 'controllers/lazy_controller.dart';
+
 void main() {
-  Get.put(MyController());
+
+  // Dependency Injection Get.put
+  // Get.put(MyController());
+
+  //Dependency Injection Get.lazyPut
+  Get.lazyPut<LazyController>(()=> LazyController());
   runApp(const MyApp());
 }
 

@@ -2,13 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_demo/components/custom_button_style.dart';
 
-class StatePage extends StatelessWidget {
+class StatePage extends StatefulWidget {
+   StatePage({super.key});
+
+  @override
+  State<StatePage> createState() => _StatePageState();
+}
+
+class _StatePageState extends State<StatePage> {
   var count = 0.obs;
 
   void increment(){
     count++;
   }
-   StatePage({super.key});
 
   @override
   Widget build(BuildContext context) {
