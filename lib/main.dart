@@ -1,16 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_demo/controllers/async_service_controller.dart';
 import 'package:get_demo/pages/home_page.dart';
 
-import 'controllers/lazy_controller.dart';
 
-void main() {
+void main() async{
 
   // Dependency Injection Get.put
   // Get.put(MyController());
 
   //Dependency Injection Get.lazyPut
-  Get.lazyPut<LazyController>(()=> LazyController());
+  // Get.lazyPut<LazyController>(()=> LazyController());
+
+  // Dependency Injection Get.putAsync
+  WidgetsFlutterBinding.ensureInitialized();
+   await Get.putAsync<AsyncService>(() async {
+    return AsyncService();
+  });
   runApp(const MyApp());
 }
 
