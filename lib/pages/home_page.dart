@@ -5,6 +5,7 @@ import 'package:get_demo/pages/next_page.dart';
 import 'package:get_demo/pages/state_page.dart';
 import 'package:get_demo/pages/student_name.dart';
 import 'package:get_demo/pages/unique_counter.dart';
+import 'package:get_demo/pages/worker_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -120,7 +121,15 @@ class HomePage extends StatelessWidget {
               style: customButtonStyle,
               onPressed: (){
                 Get.to( UniqueCounter());
-              }, child: const Text('Unique Id'))
+              }, child: const Text('Unique Id')),
+               const SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+              style: customButtonStyle,
+              onPressed: (){
+               Get.to( WorkerPage());
+              }, child: const Text('Worker Page'))
 
             
         
